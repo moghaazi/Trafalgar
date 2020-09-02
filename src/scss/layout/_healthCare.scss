@@ -1,0 +1,55 @@
+@import './helpers/_variables'; // Variables
+@import './components/_btn'; // Btn
+
+.health-care {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 200px;
+  grid-gap: 10rem;
+
+  @media (max-width: 1150px) {
+    grid-template-columns: 1fr;
+
+    .text {
+      margin-bottom: 6rem;
+    }
+  }
+
+  // Text
+  .text {
+    h1 {
+      font: bold 3.6rem/5.6rem 'Alata', sans-serif;
+      width: 427px;
+      color: $darkColor;
+      margin-bottom: 4rem;
+    }
+
+    span {
+      @extend %headBorder;
+    }
+
+    p {
+      width: 430px;
+      font: lighter 1.8rem/3.2rem 'Alata', sans-serif;
+      color: $lightColor;
+      margin-bottom: 5rem;
+
+      // @media (max-width: 1150px) {
+      //   width: 250px;
+      // }
+
+      // @media (max-width: 992px) {
+      //   width: 430px;
+      // }
+    }
+
+    a {
+      @extend %btn;
+    }
+  }
+
+  // Img
+  img {
+    width: 60rem;
+  }
+}

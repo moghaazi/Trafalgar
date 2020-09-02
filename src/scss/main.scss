@@ -1,0 +1,64 @@
+// --------------------------- Import ----------------------------------------
+@import './helpers/rwd'; // breakPoints
+@import './layout/header'; // header
+@import './layout/services'; // services
+@import './layout/healthCare'; // healthCare
+@import './layout/apps'; // apps
+@import './layout/testimonials'; // testimonials
+@import './layout/article'; // article
+@import './layout/footer'; // footer
+
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+// --------------------------- Global --------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 3rem;
+
+  @media (max-width: 576px) {
+    padding: 0 1rem;
+  }
+}
+
+::selection {
+  background-color: #111;
+  color: #fff;
+}
+
+// Custom Scroll Bar
+// For Firefox
+:root {
+  scrollbar-color: #666 #222 !important;
+  scrollbar-width: thin !important;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right, #5b9bf3, #67c3f3);
+  border-radius: 5rem;
+}

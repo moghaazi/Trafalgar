@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        // --------------------------- fav Icon --------------------------
+        link(rel="shortcut icon", href="./assets/icon/favIcon.svg")
+        // --------------------------- SCSS --------------------------
+        link(rel="stylesheet", href="./scss/main.scss")
+        // --------------------------- Swiper --------------------------
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+
+        title Trafalgar
+
+
+    body
+        .container
+
+            // --------------------------- Header --------------------------
+            header
+
+                .logo
+                    .t t
+                    .trafalgar trafalgar
+
+                nav
+                    ul(onclick="myFunction(event)")
+                        li: a.active(href="#") Home
+                        li: a(href="#services") Find a doctor
+                        li: a(href="#apps") Apps
+                        li: a(href="#testimonials") Testimonials
+                        li: a(href="#footer") About us
+
+            .header-info
+
+                .text
+                    h1 Virtual healthcare for you
+                    p Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
+                    a Consult today
+
+                img(src=`./assets/img/trafalgar-header.svg`)
+
+
+            // --------------------------- Services --------------------------
+            .services#services
+
+
+                .title Our <span>serv</span>ices
+                .desc We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment with our highly qualified doctors you can consult with us which type of service is suitable for your health
+
+                .our-services
+
+
+                    .bg-services: img(src=`./assets/img/services-bg.svg`) 
+
+                    .card-box
+                        img(src=`./assets/icon/search.svg`)
+                        h1 Search doctor
+                        p Choose your doctor from thousands of specialist, general, and trusted hospitals
+
+                    .card-box
+                        img(src=`./assets/icon/pharmacy.svg`)
+                        h1 Online pharmacy
+                        p Buy  your medicines with our mobile application with a simple delivery system
+
+                    .card-box
+                        img(src=`./assets/icon/consultation.svg`)
+                        h1 Consultation
+                        p Free consultation with our trusted doctors and get the best recomendations
+
+                    .card-box
+                        img(src=`./assets/icon/info.svg`)
+                        h1 Details info
+                        p Free consultation with our trusted doctors and get the best recomendations
+
+                    .card-box
+                        img(src=`./assets/icon/care.svg`)
+                        h1 Emergency care
+                        p You can get 24/7 urgent care for yourself or your children and your lovely family
+
+                    .card-box
+                        img(src=`./assets/icon/tracking.svg`)
+                        h1 Tracking
+                        p Track and save your medical history and health data 
+
+
+                a Learn more
+
+
+            // --------------------------- Health Care --------------------------
+            .health-care
+
+                img(src=`./assets/img/healthCare.svg`)
+
+                .text
+                    h1 Leading healthcare <span>pro</span>viders
+                    p Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it’s not just work. We take pride in the solutions we deliver
+                    a Learn more
+
+
+            // --------------------------- Apps --------------------------
+            .apps#apps
+
+                .text
+                    h1 Download our <span>mob</span>ile apps
+                    p Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely
+                    a Download ↓
+
+                img(src=`./assets/img/app.svg`)
+
+
+            // --------------------------- Testimonials --------------------------
+            .testimonials#testimonials
+
+                .shape: img(src=`./assets/icon/shape.svg`)
+                .shape2: img(src=`./assets/icon/shape.svg`)
+
+                .title What our cus<span>tom</span>er are saying
+                
+                .swiper-container
+                    .swiper-button-prev
+                    .swiper-button-next
+                    .swiper-wrapper
+
+                        //- Person 1
+                        .person.swiper-slide
+
+                            .founder
+
+                                .img-box
+                                    img(src=`./assets/img/testimonial.png`)
+                                .text
+                                    h1 Edward Newgate
+                                    span Founder Circle 
+
+                            p “Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”
+
+                        //- Person 2
+                        .person.swiper-slide
+
+                            .founder
+
+                                .img-box
+                                    img(src=`./assets/img/testimonial.png`)
+                                .text
+                                    h1 Ahmad Moghazi
+                                    span CEO 
+
+                            p “ information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”
+
+
+            // --------------------------- Articles --------------------------
+            .article
+
+                .title Check out o<span>ur l</span>atest article
+
+                .article-container
+
+                    .shape1: img(src=`./assets/icon/shape.svg`)
+                    .shape2: img(src=`./assets/img/services-bg.svg`) 
+
+                    .article-box
+                        img(src=`./assets/img/article1.png`)
+                        .info
+                            h1 Disease detection, check up in the laboratory
+                            p In this case, the role of the health laboratory is very important to doa disease detection...
+                            a Read more →
+
+                    .article-box
+                        img(src=`./assets/img/article2.png`)
+                        .info
+                            h1 Herbal medicines that are safe for consumption
+                            p Herbal medicine is very widely used at this time because of its very good for your health...
+                            a Read more →
+
+                    .article-box
+                        img(src=`./assets/img/article3.png`)
+                        .info
+                            h1 Natural care for healthy facial skin
+                            p A healthy lifestyle should start from now and also for your skin health.There are some...
+                            a Read more →   
+
+                .btn
+                    a View all
+
+
+        // --------------------------- Footer --------------------------
+        footer#footer
+
+            .shape: img(src=`./assets/icon/shape.svg`)
+
+            .trafaglar
+                .logo
+                    .t t
+                    .trafalgar trafalgar
+                p Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
+                .Copr
+                    h3 ©Trafalgar PTY LTD 2020. All rights reserved
+                    h2 Design by - 
+                        a(href="https://dribbble.com/musicalryo", target="_blank") Aryo Pamungkas
+                    h2 Developed by - 
+                        a(href="https://github.com/moghaazi", target="_blank") Moghazi
+
+
+            .company
+                h3 Company
+                ul
+                    li: a(href="#") About
+                    li: a(href="#") Testimonials
+                    li: a(href="#") Find a doctor
+                    li: a(href="#") Apps
+
+            .region
+                h3 Region
+                ul
+                    li: a(href="#") Indonesia
+                    li: a(href="#") Singapore
+                    li: a(href="#") Hongkong
+                    li: a(href="#") Canada
+
+            .help
+                h3 Help
+                ul
+                    li: a(href="#") Help center
+                    li: a(href="#") Contact support
+                    li: a(href="#") Instructions
+                    li: a(href="#") How it works
+        
+
+
+
+        // ----------------------------- Swiper ----------------------------
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        // ----------------------------- Js ----------------------------
+        script(src="./main.js")

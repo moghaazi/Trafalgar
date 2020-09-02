@@ -1,0 +1,154 @@
+@import './helpers/_variables'; // Variables
+@import './components/_btn'; // Btn
+
+header {
+  margin: 5.6rem 0 6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Logo
+  .logo {
+    display: flex;
+
+    .t {
+      background-color: #458ff6;
+      width: 4.1rem;
+      height: 4.1rem;
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font: bold 2.6rem 'Alata', sans-serif;
+      text-transform: capitalize;
+      margin-right: 1rem;
+    }
+
+    .trafalgar {
+      align-self: center;
+      font: bold 2.4rem 'Alata', sans-serif;
+      text-transform: capitalize;
+      color: #233348;
+    }
+  }
+
+  // Nav
+  nav {
+    ul {
+      display: flex;
+
+      li {
+        all: unset;
+        margin: 2rem;
+
+        a {
+          all: unset;
+          font: 1.8rem 'Alata', sans-serif;
+          color: #1f1534ab;
+          cursor: pointer;
+          transition: 0.1s;
+
+          &:hover {
+            color: #1f1534;
+            font-weight: bold;
+          }
+
+          &:active {
+            color: #1f1534;
+            font-weight: bold;
+          }
+        }
+
+        .active {
+          color: #1f1534;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.header-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 17rem;
+
+  // Text
+  .text {
+    h1 {
+      font: bold 4.8rem/5.6rem 'Alata', sans-serif;
+      width: 427px;
+      color: $darkColor;
+      margin-bottom: 4rem;
+    }
+
+    p {
+      width: 454px;
+      font: lighter 2.1rem/3.2rem 'Alata', sans-serif;
+      color: $lightColor;
+      margin-bottom: 5rem;
+    }
+
+    a {
+      all: unset;
+      background-color: #458ff6;
+      color: #fff;
+      border: 2px solid #458ff6;
+      font: bold 1.8rem 'Alata', sans-serif;
+      letter-spacing: 0.2px;
+      border-radius: 55px;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.2s;
+      display: inline-block;
+
+      // Hover
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 2px 14px #4a4c4e8e;
+      }
+
+      // Click
+      &:active {
+        transform: scale(0.9);
+      }
+
+      // Hover
+      &:hover {
+        box-shadow: 0px 2px 14px #458ff6;
+      }
+    }
+  }
+
+  // Img
+  img {
+    width: 55rem;
+  }
+}
+
+// Resposive ----------------------------
+
+// lg 992px
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+
+    .logo {
+      margin-bottom: 3rem;
+    }
+
+    nav ul li a {
+      font-size: 2.5vw;
+    }
+  }
+
+  .header-info {
+    grid-template-columns: 1fr;
+
+    .text {
+      margin-bottom: 6rem;
+    }
+  }
+}

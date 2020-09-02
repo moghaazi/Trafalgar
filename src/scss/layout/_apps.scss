@@ -1,0 +1,47 @@
+@import './helpers/_variables'; // Variables
+@import './components/_btn'; // Btn
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 15rem;
+
+  // lg 350px
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+
+    .text {
+      margin-bottom: 6rem;
+    }
+  }
+
+  // Text
+  .text {
+    h1 {
+      font: bold 3.6rem/4.8rem 'Alata', sans-serif;
+      width: 280px;
+      color: $darkColor;
+      margin-bottom: 4rem;
+    }
+
+    span {
+      @extend %headBorder;
+    }
+
+    p {
+      width: 420px;
+      font: lighter 1.8rem/3rem 'Alata', sans-serif;
+      color: $lightColor;
+      margin-bottom: 5rem;
+    }
+
+    a {
+      @extend %btn;
+    }
+  }
+
+  // Img
+  img {
+    width: 60rem;
+  }
+}

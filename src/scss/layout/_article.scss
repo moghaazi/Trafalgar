@@ -1,0 +1,122 @@
+.article {
+  margin-bottom: 25rem;
+  // Title
+  .title {
+    font: bold 3.6rem 'Alata', sans-serif;
+    color: $darkColor;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 8rem;
+
+    // sm 350px
+    @media (max-width: 576px) {
+      line-height: 7rem;
+    }
+
+    span {
+      @extend %headBorder;
+    }
+  }
+
+  // Article-cont
+  .article-container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 7rem;
+    position: relative;
+
+    // lg 992px
+    @media (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 6rem 3rem;
+    }
+
+    // ms 350px
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    // Shape 1
+    .shape1 {
+      position: absolute;
+      z-index: -2;
+      top: -5rem;
+      left: -2.5rem;
+    }
+
+    // shape 2
+    .shape2 {
+      position: absolute;
+      z-index: -2;
+      right: -36rem;
+      top: -26rem;
+    }
+
+    // Article Box
+    .article-box {
+      // width: 350px;
+      // height: 512px;
+      padding-bottom: 4rem;
+      border-radius: 2rem;
+      box-shadow: 0 3px 15px #00000017;
+      background-color: #ffffff;
+      transition: 0.2s;
+
+      // Box Hover
+      &:hover {
+        box-shadow: 0 4px 20px #0000003d;
+        cursor: pointer;
+        transform: scale(1.1) rotate(2deg);
+      }
+
+      // Img
+      img {
+        margin-bottom: 2rem;
+        width: 100%;
+      }
+
+      // Info
+      .info {
+        display: grid;
+        grid-gap: 1.5rem;
+        padding: 0 4rem;
+
+        h1 {
+          font: bold 2.1rem 'Alata', sans-serif;
+          width: 250px;
+          color: $darkColor;
+        }
+
+        p {
+          font: lighter 1.6rem/2.8rem 'Alata', sans-serif;
+          width: 266px;
+          color: $lightColor;
+          margin-bottom: 1rem;
+        }
+
+        a {
+          all: unset;
+          color: #4089ed;
+          font: 1.7rem 'Alata', sans-serif;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+
+  // Btn
+  .btn {
+    position: absolute;
+    left: 45%;
+
+    // @media (max-width: 576px) {
+    //   position: absolute;
+    //   left: 45%;
+    // }
+
+    a {
+      @extend %btn;
+    }
+  }
+}

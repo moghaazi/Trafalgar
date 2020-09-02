@@ -1,0 +1,116 @@
+@import './helpers/_variables'; // Variables
+@import './components/_btn'; // Btn
+@import './components/_headBorder'; // _headBorder
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20rem;
+
+  // Title
+  .title {
+    font: bold 3.6rem 'Alata', sans-serif;
+    color: $darkColor;
+    letter-spacing: 3px;
+
+    span {
+      @extend %headBorder;
+    }
+  }
+
+  // Paragraph
+  .desc {
+    width: 952px;
+    text-align: center;
+    font: lighter 1.8rem/3rem 'Alata', sans-serif;
+    letter-spacing: 0.2px;
+    color: $lightColor;
+    margin-top: 5rem;
+
+    // lg 350px
+    @media (max-width: 992px) {
+      font-size: 1.5rem;
+      width: 750px;
+    }
+
+    // ms 350px
+    @media (max-width: 768px) {
+      width: 550px;
+    }
+
+    // sm 350px
+    @media (max-width: 500px) {
+      width: 470px;
+    }
+  }
+
+  // Our Services
+  .our-services {
+    display: grid;
+    grid-gap: 0 3.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 8rem;
+    position: relative;
+
+    // lg 992px
+    @media (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // ms 350px
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    // bg
+    .bg-services {
+      position: absolute;
+      z-index: -2;
+      top: -19rem;
+      left: -25rem;
+    }
+
+    // Card Box
+    .card-box {
+      width: 350px;
+      height: 354px;
+      background-color: #ffffff;
+      box-shadow: 0 3px 15px #00000017;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 3.5rem;
+      margin-top: 7rem;
+      transition: 0.2s;
+
+      // Hover
+      &:hover {
+        box-shadow: 0 4px 20px #0000003d;
+        cursor: pointer;
+        transform: scale(1.1) rotate(2deg);
+      }
+
+      h1 {
+        font: bold 2.4rem 'Alata', sans-serif;
+        color: $darkColor;
+      }
+
+      p {
+        margin-top: -3.5rem;
+        font: lighter 1.6rem/2.8rem 'Alata', sans-serif;
+        color: $lightColor;
+        width: 266px;
+        text-align: left;
+      }
+    }
+  }
+
+  // Btn
+  a {
+    @extend %btn;
+  }
+}

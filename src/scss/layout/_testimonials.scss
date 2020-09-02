@@ -1,0 +1,126 @@
+@import './helpers/_variables'; // Variables
+@import './components/_btn'; // Btn
+
+// .swiper-container {
+//   z-index: 1;
+//   padding: 10rem;
+// }
+
+.testimonials {
+  background-image: $gradientColor;
+  padding: 5rem 3rem;
+  border-radius: 2.4rem;
+  margin-bottom: 13rem;
+  position: relative;
+
+  // Shape
+  .shape {
+    position: absolute;
+    right: -2rem;
+    z-index: 2;
+    top: -6rem;
+  }
+
+  // Shape 2
+  .shape2 {
+    position: absolute;
+    left: -8rem;
+    z-index: 2;
+    bottom: 3rem;
+  }
+
+  // Title
+  .title {
+    font: bold 3.6rem 'Alata', sans-serif;
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 12rem;
+
+    @media (max-width: 768px) {
+      line-height: 7rem;
+    }
+
+    span {
+      @extend %headBorder;
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  // Person
+  .person {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    // lg 350px
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+
+    // Founder
+    .founder {
+      display: flex;
+
+      // lg 350px
+      @media (max-width: 992px) {
+        margin-bottom: 3rem;
+      }
+
+      // Img
+      .img-box {
+        width: 132px;
+        height: 132px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 2rem;
+
+        img {
+          transition: 0.3s;
+
+          // Hover
+          &:hover {
+            transform: scale(1.2) rotate(10deg);
+          }
+        }
+      }
+
+      // Name&title
+      .text {
+        align-self: center;
+
+        h1 {
+          font: bold 2.2rem 'Alata', sans-serif;
+          color: #fff;
+        }
+
+        span {
+          font: lighter 1.8rem 'Alata', sans-serif;
+          color: #ffffffbe;
+        }
+      }
+    }
+
+    // Paragraph
+    p {
+      font: lighter 1.9rem/3rem 'Alata', sans-serif;
+      color: #ffffffe3;
+    }
+  }
+}
+
+// Preve
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: 'preve';
+  outline: none;
+  color: black;
+}
+
+// Next
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: 'next';
+  outline: none;
+  color: black;
+}

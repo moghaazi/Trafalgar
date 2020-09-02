@@ -1,0 +1,36 @@
+@mixin rwd($brakPoint) {
+  // xs 350px
+  @if $brakPoint == xs {
+    @media (min-width: 350px) {
+      @content;
+    }
+  }
+
+  // sm 576px
+  @if $brakPoint == sm {
+    @media (min-width: 480px) {
+      @content;
+    }
+  }
+
+  // md 768px
+  @if $brakPoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  // lg 992px
+  @if $brakPoint == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  // xl 1150px
+  @if $brakPoint == xl {
+    @media (min-width: 1150px) {
+      @content;
+    }
+  }
+}
