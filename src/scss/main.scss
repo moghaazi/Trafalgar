@@ -30,13 +30,33 @@ body {
   overflow-x: hidden;
 }
 
-.container {
-  padding: 0 3rem;
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-  @media (max-width: 576px) {
-    padding: 0 1rem;
+.container {
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
   }
 }
+
 
 ::selection {
   background-color: #111;
