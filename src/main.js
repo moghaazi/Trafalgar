@@ -45,28 +45,28 @@ var mySwiper = new Swiper('.swiper-container', {
 })
 
 // ---------------- Header Nav Active -------------------------------
-// window.myFunction = function (event) {
-//   // reset all menu items
-//   document.querySelectorAll('header nav ul li a.active').forEach(function (item) {
-//     item.classList.remove('active')
-//   })
-//   // mark as active selected menu item
-//   event.target.classList.add('active')
-// }
+window.myFunction = function (event) {
+  // reset all menu items
+  document.querySelectorAll('header nav ul li a.active').forEach(function (item) {
+    item.classList.remove('active')
+  })
+  // mark as active selected menu item
+  event.target.classList.add('active')
+}
 
-// // ================ Header Animation ================================
-// let tl = gsap.timeline({ defults: { durations: 1 } })
+// ================ Header Animation ================================
+let tl = gsap.timeline({ defults: { durations: 1 } })
 
-// tl.fromTo(
-//   `header nav  li`,
-//   { y: -50, opacity: 0 },
-//   { y: 0, opacity: 1, ease: `back(3)`, stagger: { each: 0.1, from: `start` } }
-// )
-// tl.fromTo(
-//   `header .logo`,
-//   { y: -50, opacity: 0 },
-//   { y: 0, opacity: 1, delay: 0.5 },
-//   `.2`
-// )
-// tl.fromTo(`.header-info .text`, { x: -50, opacity: 0 }, { x: 0, opacity: 1 }, `-=.7`)
-// tl.fromTo(`.header-info img`, { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, `-=.5`)
+tl.fromTo(
+  `header nav  li`,
+  { y: -50, opacity: 0 },
+  { y: 0, opacity: 1, ease: `back(3)`, stagger: { each: 0.1, from: `start` } }
+)
+tl.fromTo(
+  `header .logo`,
+  { y: -50, opacity: 0 },
+  { y: 0, opacity: 1, delay: 0.5 },
+  `.2`
+)
+tl.fromTo(`.header-info .text`, { x: -50, opacity: 0 }, { x: 0, opacity: 1 }, `-=.7`)
+tl.fromTo(`.header-info img`, { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, `-=.5`)
