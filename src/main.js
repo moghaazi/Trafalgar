@@ -55,7 +55,8 @@ window.myFunction = function (event) {
 }
 
 // ================ Header Animation ================================
-let tl = gsap.timeline({ defults: { durations: 1 } })
+window.onload = function() { 
+  let tl = gsap.timeline({ defults: { durations: 1 } })
 
 tl.fromTo(
   `header nav  li`,
@@ -70,3 +71,4 @@ tl.fromTo(
 )
 tl.fromTo(`.header-info .text`, { x: -50, opacity: 0 }, { x: 0, opacity: 1 }, `-=.7`)
 tl.fromTo(`.header-info img`, { x: 50, opacity: 0 }, { x: 0, opacity: 1 }, `-=.5`)
+}
