@@ -8,10 +8,11 @@
 
 .testimonials {
   background-image: $gradientColor;
-  padding: 5rem 3rem;
   border-radius: 2.4rem;
   margin-bottom: 13rem;
   position: relative;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 
   // Shape
   .shape {
@@ -51,6 +52,9 @@
   .person {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     // lg 350px
     @media (max-width: 992px) {
@@ -74,6 +78,7 @@
         border-radius: 50%;
         overflow: hidden;
         margin-right: 2rem;
+        margin-bottom: 1rem;
 
         img {
           transition: 0.3s;
@@ -105,6 +110,7 @@
     p {
       font: lighter 1.9rem/3rem 'Alata', sans-serif;
       color: #ffffffe3;
+      min-width: 74rem;
     }
   }
 }
