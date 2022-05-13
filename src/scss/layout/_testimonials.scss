@@ -11,8 +11,8 @@
   border-radius: 2.4rem;
   margin-bottom: 13rem;
   position: relative;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  overflow: hidden;
+  padding: 2rem;
 
   // Shape
   .shape {
@@ -131,8 +131,3 @@
   color: black;
 }
 
-
-.person swiper-slide swiper-slide-active{
-  display: flex;
-  flex-direction: column;
-}
