@@ -130,3 +130,9 @@
   outline: none;
   color: black;
 }
+
+
+.person swiper-slide swiper-slide-active{
+  display: flex;
+  flex-direction: column;
+}
